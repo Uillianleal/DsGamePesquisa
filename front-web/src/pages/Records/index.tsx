@@ -6,7 +6,7 @@ import Pagination from '../../components/Pagination';
 import { Records } from '../../Types/records';
 import { SpringPage } from '../../Types/vendor/spring';
 import { BASE_URL } from '../../util/request';
-import { Link } from 'react-router-dom';
+import Filters from '../../components/Filters';
 
 type ControlComponentData = {
   activePage: number;
@@ -49,11 +49,7 @@ function RecordsPage() {
 
   return (
     <div className="page-container">
-      <div className="filters-container records-actions">
-        <Link to="/charts">
-          <button className="action-filters">VER GRÁFICOS</button>
-        </Link>
-      </div>
+      <Filters link="/charts" linkText="VER GRÁFICOS" />
       <table className="records-table" cellPadding="0" cellSpacing="0">
         <thead>
           <tr>
