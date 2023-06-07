@@ -22,8 +22,14 @@ body {
   background: var(--color-black);
 }
 
-a {
+a,
+a:hover {
   text-decoration: none;
+  color: unset;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .text-primary {
